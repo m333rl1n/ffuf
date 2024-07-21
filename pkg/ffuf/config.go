@@ -45,6 +45,7 @@ type Config struct {
 	ProgressFrequency         int                   `json:"-"`
 	ProxyURL                  string                `json:"proxyurl"`
 	Quiet                     bool                  `json:"quiet"`
+	SemiQuiet                 bool                  `json:"semiQuiet"`
 	Rate                      int64                 `json:"rate"`
 	Raw                       bool                  `json:"raw"`
 	Recursion                 bool                  `json:"recursion"`

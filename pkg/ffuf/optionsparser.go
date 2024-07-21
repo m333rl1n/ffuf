@@ -60,6 +60,7 @@ type GeneralOptions struct {
 	MaxTimeJob                int      `json:"maxtime_job"`
 	Noninteractive            bool     `json:"noninteractive"`
 	Quiet                     bool     `json:"quiet"`
+	SemiQuiet                 bool     `json:"semiquiet"`
 	Rate                      int      `json:"rate"`
 	ScraperFile               string   `json:"scraperfile"`
 	Scrapers                  string   `json:"scrapers"`
@@ -517,6 +518,7 @@ func ConfigFromOptions(parseOpts *ConfigOptions, ctx context.Context, cancel con
 	conf.OutputSkipEmptyFile = parseOpts.Output.OutputSkipEmptyFile
 	conf.IgnoreBody = parseOpts.HTTP.IgnoreBody
 	conf.Quiet = parseOpts.General.Quiet
+	conf.SemiQuiet = parseOpts.General.SemiQuiet
 	conf.ScraperFile = parseOpts.General.ScraperFile
 	conf.Scrapers = parseOpts.General.Scrapers
 	conf.StopOn403 = parseOpts.General.StopOn403
